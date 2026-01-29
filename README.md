@@ -36,7 +36,7 @@ Entregamos, un ranking un ranking por distrito/zona que permite identificar **d�
 - `metros`: superficie (m²).
 - `habitaciones`: número de habitaciones.
 - `ascensor`: si tiene ascensor (`S` / `N`).
-- `planta`: altura (p.ej. `BAJO`, `1ª`, ..., `20ª`).
+- `planta`: altura (ej. `BAJO`, `1ª`, ..., `20ª`).
 - `baños`: número de baños.
 - `cod_distrito`: código del distrito (01–21).
 - `renta_neta_media_por_hogar`: renta neta media por hogar (INE 2023; en SQL se renombra a `rnmh_2023`).
@@ -54,9 +54,9 @@ Entregamos, un ranking un ranking por distrito/zona que permite identificar **d�
 - **H1**: diferencia de precio medio por m² entre pisos con y sin ascensor por zona.
   - **H1.1**: diferencia por tipología (habitaciones: 1 vs 2).
   - **H1.2**: diferencia por altura (`planta`).
-- **H2**: zonas más/menos asequibles según la renta (proxy: `precio_medio / renta_media`).
+- **H2**: zonas más/menos asequibles según la renta (`precio_medio / renta_media`).
 - **H4**: años de renta íntegra necesarios para cubrir la entrada del `20%` del precio de venta.
-- **H5**: índice de asequibilidad (proxy: `renta_media / precio_m2_medio`).
+- **H5**: índice de asequibilidad (`renta_media / precio_m2_medio`).
 
 ## Proceso de análisis 
 1. Obtención e importación de datos de nuestras diferentes fuentes. 
@@ -77,7 +77,7 @@ Entregamos, un ranking un ranking por distrito/zona que permite identificar **d�
 - **H4 (Entrada 20%)**: habría que destinar casi `8` años de renta para poder adquirir el `20%` de entrada de venta en el Barrio de Salamanca, unos `7` en Chamartín y unos `6.5` en Moncloa. Por el contrario, para un piso en Vallecas solo son tres cuartos de año, como en Villaverde y en Usera un año completo.
 - **H5 (Índice renta / precio·m²)**: Ciudad Lineal por cada metro cuadrado paga `23` veces el metro cuadrado con su renta. Le siguen Moncloa y Hortaleza con un ratio del `17`. En el otro lado, tendríamos empatados Vicálvaro y Carabanchel, cuyo ratio es `1:1`. Después se situaría Barrio de Salamanca y Centro.
 
-## Recomendaciones de negocio (lecturas periodísticas -interpretación-)
+## Recomendaciones de negocio (lecturas periodísticas -Interpretación-)
 Lo que sigue es una intepretación periodística en base al contexto de negocio en el que se enmarca el proyecto; no es una derivación inmediata de los datos:
 - El mercado inmobiliario madrileño presenta una fractura insalvable entre el valor de los activos y la capacidad adquisitiva real, donde el esfuerzo financiero para la compra varía de forma drástica según el código postal: mientras que en zonas como Salamanca o Chamartín la barrera de entrada (el 20% inicial) exige hasta 8 años de ahorro íntegro, en Vallecas o Villaverde este acceso se reduce a menos de un año, evidenciando una brecha de acumulación de capital casi imposible de cerrar para las rentas medias en distritos del norte. Esta dificultad se agrava en barrios como Vicálvaro y Carabanchel, que muestran una desconexión total con ratios de esfuerzo de hasta 78.68, lo que indica que, a pesar de no ser las zonas más caras en términos absolutos, la desproporción entre los precios de venta y los ingresos locales es la más severa de la capital, convirtiendo la propiedad en una meta inalcanzable para quienes dependen exclusivamente de su renta.
 - La dualidad del mercado madrileño exige una estrategia diferenciada: mientras en el sur (Villaverde o Vallecas) la prioridad debe ser la compra inmediata debido a que la barrera de entrada es mínima y el retorno rápido, en zonas de desequilibrio extremo como Vicálvaro o Carabanchel la decisión inteligente es el alquiler para evitar el sobreprecio.
