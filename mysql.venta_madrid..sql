@@ -46,6 +46,16 @@ FROM tabla_madrid as m
 LEFT JOIN tabla_renta as r
 ON m.cod_distrito = r.cod_distrito;
 
+SELECT 
+    m.cod_distrito,
+    r.rnmh_2023,
+    ROUND((r.rnmh_2023 * 1.028 * 1.029), 0) AS rnmh_2025
+FROM tabla_madrid AS m
+LEFT JOIN tabla_renta AS r
+    ON m.cod_distrito = r.cod_distrito
+GROUP BY m.cod_distrito, r.rnmh_2023
+ORDER BY
+cod_distrito;
 
 -- H1: ¿Cuál es la diferencia de precio medio entre pisos con y sin ascensor? 
 SELECT
